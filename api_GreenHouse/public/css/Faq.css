@@ -1,0 +1,264 @@
+.faq summary{
+  color: rgb(0, 0, 0);
+  margin-left: 150px;
+  display: flex;
+  width: 100%;
+}
+.faq p {
+  margin-left: 150px;
+  margin-right: 150px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  display: flex;
+}
+
+.fundo {
+  background-color: #d1d1d185;
+  display: flex;
+  background-size: cover;
+  border: solid black 1px;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 10px;
+  box-shadow: 0px 10px 20px rgb(107, 104, 104);
+  cursor: pointer;
+}
+
+.fundo:hover {
+  transform: scale(1.05)
+}
+
+.faq1 summary {
+  color: rgb(0, 0, 0);
+  margin-left: 150px;
+  display: flex;
+  
+}
+
+.faq1 p {
+  margin-left: 150px;
+  margin-right: 150px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+ 
+}
+
+.fundo1 {
+  background-color: #d1d1d185;
+  display: flex;
+  background-size: cover;
+  border: solid black 1px;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  box-shadow: 0px 10px 20px rgb(107, 104, 104);
+  cursor: pointer;
+}
+
+.fundo1:hover {
+  transform: scale(1.05)
+}
+
+.faq2 summary {
+  color: rgb(0, 0, 0);
+  margin-left: 150px;
+  display: flex;
+}
+
+.faq2 p {
+  margin-left: 150px;
+  margin-right: 150px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+.fundo2 {
+  background-color: #d1d1d185;
+  display: flex;
+  background-size: cover;
+  border: solid black 1px;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  box-shadow: 0px 10px 20px rgb(107, 104, 104);
+  cursor: pointer;
+}
+
+.fundo2:hover {
+  transform: scale(1.05)
+}
+
+.faq3 summary {
+  color: rgb(0, 0, 0);
+  margin-left: 150px;
+  display: flex;
+}
+
+.faq3 p {
+  margin-left: 150px;
+  margin-right: 150px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+.fundo3 {
+  background-color: #d1d1d185;
+  display: flex;
+  background-size: cover;
+  border: solid black 1px;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  box-shadow: 0px 10px 20px rgb(107, 104, 104);
+  cursor: pointer;
+}
+
+.fundo3:hover {
+  transform: scale(1.05)
+}
+
+
+
+.faq4 summary {
+  color: rgb(0, 0, 0);
+  margin-left: 150px;
+  display: flex;
+}
+
+.faq4 p {
+  margin-left: 150px;
+  margin-right: 150px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+.fundo4 {
+  background-color: #d1d1d185;
+  display: flex;
+  background-size: cover;
+  border: solid black 1px;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  box-shadow: 0px 10px 20px rgb(107, 104, 104);
+  cursor: pointer;
+}
+
+.fundo4:hover {
+  transform: scale(1.05)
+}
+
+.faq5 summary {
+  color: rgb(0, 0, 0);
+  margin-left: 150px;
+  display: flex;
+}
+
+.faq5 p {
+  margin-left: 150px;
+  margin-right: 150px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+.fundo5 {
+  background-color: #d1d1d185;
+  display: flex;
+  background-size: cover;
+  border: solid black 1px;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  box-shadow: 0px 10px 20px rgb(107, 104, 104);
+  cursor: pointer;
+}
+
+.fundo5:hover {
+  transform: scale(1.05)
+}
+
+.faq6 summary {
+  color: rgb(0, 0, 0);
+  margin-left: 150px;
+  display: flex;
+}
+
+.faq6 p {
+  margin-left: 150px;
+  margin-right: 150px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+.fundo6 {
+  background-color: #d1d1d185;
+  display: flex;
+  background-size: cover;
+  border: solid black 1px;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  box-shadow: 0px 10px 20px rgb(107, 104, 104);
+  cursor: pointer;
+}
+
+.fundo6:hover {
+  transform: scale(1.05)
+}
+
+.faq7 summary {
+  color: rgb(0, 0, 0);
+  margin-left: 150px;
+  display: flex;
+}
+
+.faq7 p {
+  margin-left: 150px;
+  margin-right: 150px;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+.fundo7 {
+  background-color: #d1d1d185;
+  display: flex;
+  background-size: cover;
+  border: solid black 1px;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  box-shadow: 0px 10px 20px rgb(107, 104, 104);
+  cursor: pointer;
+}
+
+.fundo7:hover {
+  transform: scale(1.05)
+}
+
+.btn a{
+  color: white;
+}
+
+details summary {
+  list-style: disc
+  
+}
+
+
+/* Alexandre */
+
+ .segundo-container {
+width: 100vw;
+height: 200px;
+display: flex;
+justify-items: center;
+align-items: center;
+justify-content: center;
+
+}
+
+.background {
+  background-color: #f2f2f285;
+}

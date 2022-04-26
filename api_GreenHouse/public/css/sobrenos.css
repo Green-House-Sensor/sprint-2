@@ -1,0 +1,181 @@
+/*BANNER*/
+.banner{
+    height: 100vh;
+    background-image: url("https://www.datocms-assets.com/48825/1622731345-headerabforgrenhouse.jpg?auto=format&w=1920");
+    background-size: cover;
+
+}
+.banner .container{
+    height: 500px;
+    align-items: center;
+}
+.banner p{
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    width: 100%;
+    margin-left: 200px;
+}
+.banner span{
+    font-weight: 800;
+}
+.vidro{
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur( 2px);
+    height: 70px;
+    border-radius: 20px;
+}
+
+#texto_centro {
+    font-weight: 200;
+    text-shadow: 2px 2px 4px black;
+}
+
+/*Sobre nós*/
+
+ .cabeçalho{
+    padding: 10px;
+    background-image: url(buried-1920x1080.png);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.titulo{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 36px;
+    text-align: left;
+    font-weight: 800;
+    color: #ffffff;
+    
+       
+}
+
+/* .divText2{
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    
+}  */
+
+.cards{
+    background-color: #ffffff;
+    height: 75vh;
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* margin-top: 10px; */
+    transition: all 0.3s;
+}
+
+.texto{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    background-color: white;
+    height: 400px;
+    width: 300px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px #00000056;
+    padding: 0px 10px 0px 10px;
+    border-style: solid;
+    border-color: #32cd4c;
+    border-width: 2px;
+    transition: all 0.3s;
+    
+}
+
+.title{
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 36px;
+    color: #32cd4c;;
+}
+
+
+/* .divF2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    background-color: white;
+    height: 400px;
+    width: 300px;
+    text-align: justify;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px #00000056;
+    padding: 0px 10px 0px 10px;
+    border-style: solid;
+    border-color: #32cd4c;
+    border-width: 2px;
+    transition: all 0.3s;
+    
+}
+
+
+/* /* .divF3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    background-color: white;
+    height: 400px;
+    width: 300px;
+    text-align: justify;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px #00000056;
+    padding: 0px 10px 0px 10px;
+    transition: all 0.3s;
+     */
+    
+
+.texto:hover {
+    box-shadow: 0px 6px 10px #32cd4c;
+    transform: scale(1.08);
+}
+
+/* .divF2:hover {
+    box-shadow: 0px 6px 10px #32cd4c;
+    transform: scale(1.08);
+}
+.divF1:hover {
+    box-shadow: 0px 6px 10px #32cd4c;
+    transform: scale(1.08);
+} */
+
+.divTitulo{
+    color: #32cd4c;
+    font-size: 25px;
+    font-weight: 600;   
+    text-align: center;
+}
+
+.tituloTeam{
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 800;
+    color: #000000;
+    font-weight: 900;
+    width: 300px;
+    height: 100px;
+    margin-left: 40%;
+
+}
+
+.fotoTeam{
+    display: flex;
+    height: 550px;
+    width: 1600px auto;
+    background-image: url(Foto_Grupo1.png);
+    background-repeat: no-repeat;
+    background-size: contain ;
+    margin-right: 100px;
+    margin-left: 100px;
+
+}

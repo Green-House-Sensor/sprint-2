@@ -1,0 +1,99 @@
+  
+/*login*/
+.main-login{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../assets/imgs/Bola_cinza_direita.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+    background-color: #f2f2f285;
+}
+.left-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.left-login h1{
+    font-size: 2.5vw;
+    color: #2b2b2b;
+}
+.left-login-image{
+    width: 35vw;
+}
+.right-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+}
+.card h1{
+    color: #2b2b2b;
+    font-weight: 800;
+    align-items:center;
+}
+.dados{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+.card input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #f0ffff94;
+    color: #2b2b2b;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    box-sizing: border-box;
+}
+.card h3{
+    color: #2b2b2b;
+    margin-bottom: 10px;
+}
+.btn{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #f0ffff;
+    background: #32cd4c;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #15ff00;
+    transition-duration: 0.4s;
+}
+
+button:hover{
+    background-color: #5ecd32;
+    color: #2b2b2b;   
+}
+
+.tamanho{
+    width: 400px;
+}
+
+.fonteinput {
+    font-family: Arial, Helvetica, sans-serif
+}

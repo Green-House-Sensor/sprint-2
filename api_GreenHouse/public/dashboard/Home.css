@@ -1,0 +1,35 @@
+.banner {
+    background-image: url("https://www.datocms-assets.com/48825/1622731345-headerabforgrenhouse.jpg?auto=format&w=1920");
+    height: 100vh;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.banner .container {
+    height: 500px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.banner p {
+    color: rgb(255, 255, 255);
+    width: 640px;
+    margin: 0;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 50px;
+    margin-left: 350px;
+    background-color: rgba(33, 61, 13, 0.604);
+    font-family: Righteous, cursive;
+    position: relative;
+}
+
+.banner span {
+    font-weight: bold;
+    color: rgb(101, 219, 54);
+}
+
+a {
+    text-decoration: none;
+}
+

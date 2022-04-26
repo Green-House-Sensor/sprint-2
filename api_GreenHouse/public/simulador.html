@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green House | Simulador</title>
+    <link rel="stylesheet" href="css/simulador.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="shortcut icon" href="green.png">
+    <script src="https://kit.fontawesome.com/4ea0191552.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <img class="imagemLogo" src="green.png">
+            <h1><a href="home.html">Green House</a></h1>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="agora"><a href="#"> <span> Simulador </span></a></li>
+                <li><a href="servicos.html">Nossos Serviços</a></li>
+                <li><a href="sobrenos.html">Sobre nós</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a>|</a></li>
+                <li><a href="login.html">Login</a></li>
+                <div class="cadastroheader">
+                    <li><a href="cadastro.html">Cadastre-se</a></li>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div class="simulador">
+        <div class="exibir">
+            <h1>Simulador financeiro</h1>
+            Faturamento anual:
+            <input id="ipt_faturamento" placeholder="Digite seu faturamento anual">
+            <br><br>
+            Número de funcionários:
+            <input id="ipt_funcionario" placeholder="Digite o número de funcionários">
+            <br><br>
+            Largura da estufa (m):
+            <input id="ipt_largura" placeholder="Digite a largura">
+            <br> <br>
+            Comprimento da estufa (m): <input id="ipt_comprimento" placeholder="Digite o  comprimento">
+            <button onclick="simular()">Simulador</button>
+            <div id="div_resposta"></div>
+        </div>
+        <div id="containersimulador1" style="display: none;">
+            <div class="icons">
+                <div class="icon2"><i class="fa-solid fa-people-group fa-5x"></i>
+                    <div id="mensagem_func"></div>
+                </div>
+                <div class="icon1"><i class="fa-solid fa-chart-line fa-6x"></i>
+                    <div id="mensagem_lucro"></div>
+                </div>           
+            </div>
+        </div>
+    </div>
+    <!-- <div id="assets1" class="assets" style="display: none;"> -->
+        
+    <!-- </div> -->
+    
+
+
+
+</body>
+<footer class="footer">
+    <div class="containerfooter">
+        <div class="links">
+            <a href="Home.html">
+                <h4>Home</h4>
+            </a>
+            <a href="sobrenos.html">
+                <h4>Sobre nós</h4>
+            </a>
+            <a href="servicos.html">
+                <h4>Nossos serviços</h4>
+            </a>
+            <a href="cadastro.html">
+                <h4>Cadastre-se</h4>
+            </a>
+            <a href="#">
+                <h4>Simulador</h4>
+            </a>
+            <a href="FAQ.html">
+                <h4>FAQ</h4>
+            </a>
+        </div>
+        <div class="contato">
+            <h2>Fale Conosco</h2>
+            <input type="text" placeholder="Email"><br><br>
+            <textarea id="mensagem" placeholder="Mensagem..."></textarea>
+            <button class="btnfooter"><i class="fa-solid fa-paper-plane fa-1x"></i><b>Enviar</b></button>
+        </div>
+        <div class="redes">
+            <h2>Redes Sociais</h2>
+            <a href="#"><i class="fa-brands fa-facebook fa-3x"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter-square fa-3x"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin fa-3x"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp-square fa-3x"></i></a>
+        </div>
+    </div>
+</footer>
+
+</html>
+
+
+
+<script>
+    function reset() {
+        ipt_faturamento.classList.remove("placeholderred")
+        ipt_faturamento.style = `border: 2px solid none;`
+        ipt_funcionario.classList.remove("placeholderred")
+        ipt_funcionario.style = `border: 2px solid none;`
+        ipt_comprimento.classList.remove("placeholderred")
+        ipt_comprimento.style = `border: 2px solid none;`
+        ipt_largura.classList.remove("placeholderred")
+        ipt_largura.style = `border: 2px solid none;`
+        div_resposta.innerHTML = ``
+    }
+    function simular() {
+        var anual = Number(ipt_faturamento.value);
+        var larg = Number(ipt_largura.value);
+        var comp = Number(ipt_comprimento.value);
+        var funcio = Number(ipt_funcionario.value);
+        var m2 = larg * comp;
+        var sensor = 125;
+        var preco = 2500;
+        var qtdSensor = m2 / sensor;
+        qtdSensor = Math.ceil(qtdSensor);
+        var reduz = funcio / 2;
+        reduz = Math.ceil(reduz);
+        reset()
+        if (funcio ==`` || anual == `` || larg == `` || comp == ``) {
+            div_resposta.innerHTML = `<b>Preencha todos os campos.</b>`
+            ipt_faturamento.placeholder = `Campo obrigatório.`
+            ipt_faturamento.style = `border: 2px solid red;`
+            ipt_faturamento.classList.add("placeholderred")
+            ipt_largura.placeholder = `Campo obrigatório.`
+            ipt_largura.style = `border: 2px solid red;`
+            ipt_largura.classList.add("placeholderred")
+            ipt_comprimento.placeholder = `Campo obrigatório.`
+            ipt_comprimento.style = `border: 2px solid red;`
+            ipt_comprimento.classList.add("placeholderred")
+            ipt_funcionario.placeholder = `Campo obrigatório.`
+            ipt_funcionario.style = `border: 2px solid red;`
+            ipt_funcionario.classList.add("placeholderred")
+        }
+        else if (m2 <= 125 && m2 > 0) {
+            containersimulador1.style.display = 'block'; 
+            preco1 = preco;
+                anual1 = anual
+            if (larg > 0 && larg > 10) {
+                mensagem_lucro.innerHTML = `Além de impulsionar sua produção a fim de obter uma receita bruta de <b>R$ ${anual1.toFixed(2)}</b>.`
+                mensagem_func.innerHTML = `Utilizando nosso sistema é possível reduzir o número de funcionários para <b>${reduz}</b>`
+                div_resposta.innerHTML = `<br>A área da sua estufa é de <b>${m2} m²</b>, então serão necessários <b>${qtdSensor} kit(s) de sensor(es)</b>, com um custo total de <b>R$ ${preco1.toFixed(2)}</b>.`
+            }
+            else {
+                preco1 = preco;
+                anual1 = anual;
+                mensagem_lucro.innerHTML = `Além de impulsionar sua produção a fim de obter uma receita bruta de <b>R$ ${anual1.toFixed(2)}</b>.`
+                mensagem_func.innerHTML = `Utilizando nosso sistema é possível reduzir o número de funcionários para <b>${reduz}</b>`
+                div_resposta.innerHTML = `<br>A área da sua estufa é de <b>${m2} m²</b>, então serão necessários <b>${qtdSensor} kit(s) de sensor(es)</b>, com um custo total de <b>R$ ${preco1.toFixed(2)}</b>.`
+            }
+        }
+        else if (m2 > 125 && m2 <= 250) {
+            containersimulador1.style.display = "block"
+            preco2 = (preco * 0.9) * qtdSensor;
+            anual2 = anual;
+            if (larg > 0 && larg > 10) {
+                mensagem_lucro.innerHTML = `Além de impulsionar sua produção a fim de obter uma receita bruta de <b>R$ ${anual2.toFixed(2)}</b>.`
+                mensagem_func.innerHTML = `Utilizando nosso sistema é possível reduzir o número de funcionários para <b>${reduz}</b>`
+                div_resposta.innerHTML = `<br>A área da sua estufa é de <b>${m2} m²</b>, então serão necessários <b>${qtdSensor} kit(s) de sensor(es)</b>, com um custo total de <b>R$ ${preco2.toFixed(2)}</b>.`
+            }
+            else {
+                mensagem_lucro.innerHTML = `Além de impulsionar sua produção a fim de obter uma receita bruta de <b>R$ ${anual2.toFixed(2)}</b>.`
+                mensagem_func.innerHTML = `Utilizando nosso sistema é possível reduzir o número de funcionários para <b>${reduz}</b>`
+                div_resposta.innerHTML = `<br>A área da sua estufa é de <b>${m2} m²</b>, então serão necessários <b>${qtdSensor} kit(s) de sensor(es)</b>, com um custo total de <b>R$ ${preco2.toFixed(2)}</b>.`
+            }
+        }
+        else if (m2 > 250 && m2 <= 375) {
+            containersimulador1.style.display = "block"
+            preco3 = (preco * 0.8) * qtdSensor;
+            anual3 = anual * 1.3;
+            if (larg > 0 && larg > 10) {
+                mensagem_lucro.innerHTML = `Além de impulsionar sua produção a fim de obter uma receita bruta de <b>R$ ${anual3.toFixed(2)}</b>.`
+                mensagem_func.innerHTML = `Utilizando nosso sistema é possível reduzir o número de funcionários para <b>${reduz}</b>`
+                div_resposta.innerHTML = `<br>A área da sua estufa é de <b>${m2} m²</b>, então serão necessários <b>${qtdSensor} kit(s) de sensor(es)</b>, com um custo total de <b>R$ ${preco3.toFixed(2)}</b>.`
+            }
+            else {
+                mensagem_lucro.innerHTML = `Além de impulsionar sua produção a fim de obter uma receita bruta de <b>R$ ${anual3.toFixed(2)}</b>.`
+                mensagem_func.innerHTML = `Utilizando nosso sistema é possível reduzir o número de funcionários para <b>${reduz}</b>`
+                div_resposta.innerHTML = `<br>A área da sua estufa é de <b>${m2} m²</b>, então serão necessários <b>${qtdSensor} kit(s) de sensor(es)</b>, com um custo total de <b>R$ ${preco3.toFixed(2)}</b>.`
+            }
+        }
+        else if (m2 > 375 && m2 <= 500) {
+            containersimulador1.style.display = "block"
+            preco4 = (preco * 0.7) * qtdSensor;
+            anual4 = anual * 1.3;
+            if (larg > 10 && larg <= 20) {
+                mensagem_lucro.innerHTML = `Além de impulsionar sua produção a fim de obter uma receita bruta de <b>R$ ${anual4.toFixed(2)}</b>.`
+                mensagem_func.innerHTML = `Utilizando nosso sistema é possível reduzir o número de funcionários para <b>${reduz}</b>`
+                div_resposta.innerHTML = `<br>A área da sua estufa é de <b>${m2} m²</b>, então serão necessários <b>${qtdSensor} kit(s) de sensor(es)</b>, com um custo total de <b>R$ ${preco4.toFixed(2)}</b>.`
+            }
+            if (larg > 20) {
+                mensagem_lucro.innerHTML = `Além de impulsionar sua produção a fim de obter uma receita bruta de <b>R$ ${anual4.toFixed(2)}</b>.`
+                mensagem_func.innerHTML = `Utilizando nosso sistema é possível reduzir o número de funcionários para <b>${reduz}</b>`
+                div_resposta.innerHTML = `<br>A área da sua estufa é de <b>${m2} m²</b>, então serão necessários <b>${qtdSensor} kit(s) de sensor(es)</b>, com um custo total de <b>R$ ${preco4.toFixed(2)}</b>.`
+            }
+            else {     
+                mensagem_lucro.innerHTML = `Além de impulsionar sua produção a fim de obter uma receita bruta de <b>R$ ${anual4.toFixed(2)}</b>.`
+                mensagem_func.innerHTML = `Utilizando nosso sistema é possível reduzir o número de funcionários para <b>${reduz}</b>`
+                div_resposta.innerHTML = `<br>A área da sua estufa é de <b>${m2} m²</b>, então serão necessários <b>${qtdSensor} kit(s) de sensor(es)</b>, com um custo total de <b>R$ ${preco4.toFixed(2)}</b>.`
+            }
+        }
+        else if (m2 > 500) {
+            containersimulador1.style.display = 'block';
+            preco5 = (preco * 0.65) * qtdSensor;
+                anual5 = anual * 1.3;
+            if (larg > 10 && larg <= 20) {
+                
+                mensagem_lucro.innerHTML = `Além de impulsionar sua produção a fim de obter uma receita bruta de <b>R$ ${anual5.toFixed(2)}</b>.`
+                mensagem_func.innerHTML = `Utilizando nosso sistema é possível reduzir o número de funcionários para <b>${reduz}</b>`
+                div_resposta.innerHTML = `<br>A área da sua estufa é de <b>${m2} m²</b>, então serão necessários <b>${qtdSensor} kit(s) de sensor(es)</b>, com um custo total de <b>R$ ${preco5.toFixed(2)}</b>.`
+            }
+            if (larg > 20) {
+                
+                mensagem_lucro.innerHTML = `Além de impulsionar sua produção a fim de obter uma receita bruta de <b>R$ ${anual5.toFixed(2)}</b>.`
+                mensagem_func.innerHTML = `Utilizando nosso sistema é possível reduzir o número de funcionários para <b>${reduz}</b>`
+                div_resposta.innerHTML = `<br>A área da sua estufa é de <b>${m2} m²</b>, então serão necessários <b>${qtdSensor} kit(s) de sensor(es)</b>, com um custo total de <b>R$ ${preco5.toFixed(2)}</b>.`
+            }
+            else {
+                
+                mensagem_lucro.innerHTML = `Além de impulsionar sua produção a fim de obter uma receita bruta de <b>R$ ${anua5.toFixed(2)}</b>.`
+                mensagem_func.innerHTML = `Utilizando nosso sistema é possível reduzir o número de funcionários para <b>${reduz}</b>`
+                div_resposta.innerHTML = `<br>A área da sua estufa é de <b>${m2} m²</b>, então serão necessários <b>${qtdSensor} kit(s) de sensor(es)</b>, com um custo total de <b>R$ ${preco5.toFixed(2)}</b>.`
+            }
+        }
+
+    }
+
+</script>

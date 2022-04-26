@@ -1,0 +1,93 @@
+.container-carousel {
+    background-color: #f2f2f285;
+}
+  .titulo_carousel{
+    /* margin-top: 30px; */
+    font-size: 54px;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: nunito;
+    margin-bottom: 0;
+    letter-spacing: -2px;
+  }
+  
+  #css {
+    color: rgb(38, 255, 0);
+    font-family: nunito;
+    letter-spacing: -2px;
+  }
+  
+  .carousel-wrapper {
+    height: 400px;
+    position: relative;
+    width: 800px;
+    display: block;
+    margin: 50px auto ;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 12px;
+    box-shadow:  19px 19px 19px  #bebebe,
+             -19px -19px 18px #ffffff;
+  }
+  
+  .carousel-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  .setas{
+    border: solid rgb(0, 0, 0);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 12px;
+  }
+  .seta-prev {
+    left: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+  }
+  .seta-next {
+    right: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  
+  [id^= "item"] {
+    display: none;
+  }
+  .item-1 {
+    z-index: 2;
+    opacity: 1;
+    background: url('img1.png');
+    background-size: cover;
+    border-radius: 8px;
+  }
+  .item-2 {
+    background: url('img2.png');
+    background-size: cover;
+    border-radius: 8px;
+  }
+  .item-3 {
+    background: url('img3.png');
+    background-size: cover;
+    border-radius: 8px;
+  }
+  
+  *:target ~ .item-1{
+    opacity: 0;
+  }
+  #item-1:target ~ .item-1 {
+    opacity: 1;
+  
+  }
+  #item-2:target ~ .item-2, #item-3:target ~ .item-3 {
+    z-index: 3;
+    opacity: 1;
+  }

@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,500;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Righteous&family=Sarala&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    color: #5ecd32;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container h1{
+    font-family: poppins, sans-serif;
+}
+
+.imagemLogo {
+    height: 60px;
+    margin-left: 110px;
+    margin-top: 17px;
+}
+
+.header h1 {
+    margin-right: 200px;
+}
+
+.container ul {
+    display: flex;
+    width: 600px;
+    justify-content: space-around ;
+    list-style: none;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.container a {
+    text-decoration: none;
+    color: #5ecd32;
+    transition: all 0.05s;
+}
+
+.agora {
+    border-top: #5ecd32;;
+border-style: solid;
+border-bottom: none;
+border-left: none;
+border-right: none;
+font-weight: 600;
+border-radius: 3px;
+}
+
+.container ul a:hover {
+border-top: #5ecd32;;
+border-style: solid;
+border-bottom: none;
+border-left: none;
+border-right: none;
+
+}
+
+.cadastroheader a {
+    background-color: #5ecd32;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+
+}
+.cadastroheader a:hover {
+    border: none;
+    
+}
+
+/* RODAPÉ */
+.containerfooter {
+    display: flex;
+    justify-content: space-between;
+  }
+  .redes {
+    margin-right: 25px;
+  }
+  .links {
+    margin-left: 25px;
+  }
+  .btnfooter {
+    height: 40px;
+    width: 100px;
+    float: right;
+    margin-top: 115px;
+    margin-left: 10px;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 4px;
+    background-color: #1f2022;
+    padding: 4px;
+    transition: all 0.3s;
+    color: #999;
+  
+  }
+  .btnfooter b {
+  padding-left: 12px;
+  }
+  
+  .btnfooter:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #999
+  }
+  footer {
+    margin: 0;
+    width: 100vw;
+    /* background-image: url(backgroundfooter.png); */
+    background-color: #292c2f;
+    color: #999;
+    border-top: #000000;
+    border-style: solid;
+    border-bottom: none;
+    border-left: none;
+    border-right: none; 
+  }
+    textarea {
+      width: 400px;
+      height: 150px;
+      box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+      border: none;
+      background-color: #1f2022;
+      font-size: 16px;
+      resize: none;
+      padding: 4px;
+      color: white;
+      
+    }
+    input {
+      box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+      border: none;
+      background-color: #1f2022;
+      padding: 4px;
+      color: white;
+    }
+    a :hover {
+    transform: scale(1.1);
+    }
+
+    html{
+      scroll-behavior: smooth;
+  }
+
