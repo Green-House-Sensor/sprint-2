@@ -5,6 +5,7 @@ USE greenhouse;
 CREATE TABLE usuario(
 	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(40),   
+    fkDependente INT,
     dtNasc DATE,  
     tipo CHAR(2),
 	CONSTRAINT tipo CHECK (tipo in('PF', 'PJ')),
@@ -13,7 +14,6 @@ CREATE TABLE usuario(
     numero VARCHAR(5),    
     email VARCHAR(60),
     senha VARCHAR(45),
-    fkDependente INT,
     FOREIGN KEY(fkDependente) REFERENCES usuario(idUsuario)
 );
 
