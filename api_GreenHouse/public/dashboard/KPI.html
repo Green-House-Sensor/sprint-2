@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenhouse | Dashboard</title>
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+    <script src="../js/funcoes.js"></script>
+    <link rel="stylesheet" href="styledash.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/4ea0191552.js" crossorigin="anonymous"></script>
+
+<body onload="validarSessao()">
+    <div class="container">
+
+        <!-- COMEÇO ESQUERDA  -->
+
+        <aside>
+            <div class="right">
+                <div class="profile">
+                    <div class="info">
+                        <div class="imagem-profile">
+                            <i class="fa-solid fa-circle-user fa-6x"></i>
+                        </div>
+                        <h3>Olá,
+                            <br>
+                            <span id="b_usuario">usuário</span>!
+                            <br>
+                            ID = <span id="b_id">teste</span>
+                        </h3>
+                        
+                        <small class="text-muted">Admin</small>
+                    </div>
+                </div><br>
+            </div>
+            <div class="sidebar">
+                <a>
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                    <a href="#">
+                        <span class="material-icons-sharp">add</span>
+                        <h3>Adicionar mais estufas</h3>
+                    </a>
+                    <a href="dependente.html">
+                        <span class="material-icons-sharp">group_add</span>
+                        <h3>Adicionar dependente</h3>
+                    </a>
+                        <a class="btn-logout" onclick="limparSessao()">
+                            <span class="material-icons-sharp">logout</span>
+                            <h3>Logout</h3>
+                        </a>
+
+        </aside>
+        <!-- FIM ESQUERDA  -->
+
+        <!-- COMEÇO MAIN (MEIO)  -->
+        <main>
+            <div class="header">
+
+                <h1>Dashboard</h1>
+                <div class="top">
+                    <div class="theme-toggler">
+                        <span class="material-icons-sharp active">light_mode</span>
+                        <span class="material-icons-sharp">dark_mode</span>
+                    </div>
+                    <div class="date">
+                        <input type="date">
+                    </div>
+                </div><br>
+                <div class="legenda-pai">
+                    <div class="legenda">
+                        <b class="text-legenda">NORMAL</b>
+                    </div>
+                    <div class="legenda1">
+                        <b class="text-legenda1">ATENÇÃO</b>
+                    </div>
+                    <div class="legenda2">
+                        <b class="text-legenda2">PERIGO</b>
+                    </div>
+                </div>
+            </div>
+            <div class="kpi-pai">
+                <div class="kpi">
+                    <b style="font-size: 14px" class="tit-kpi">Sensores Ativos</b>
+                    <span class="material-icons-sharp">sensors</span>
+                    <div id="div_sensor">
+                        
+                    </div>
+                </div>
+                <div class="kpi1">
+                    <b style="font-size: 14px" class="tit-kpi1">Umidade</b>
+                    <span class="material-icons-sharp">water_drop</span>
+                    <div class="text-kpi1">
+                        60%
+                    </div>
+                </div>
+                <div class="kpi2">
+                    <b style="font-size: 14px" class="tit-kpi2">Temperatura</b><span
+                        class="material-icons-sharp">thermostat</span>
+                    <div class="text-kpi2">
+                        15.7°C
+                    </div>
+                </div>
+                <div class="kpi3">
+                    <b style="font-size: 14px" class="tit-kpi3">Luminosidade</b><span
+                        class="material-icons-sharp">flash_on</span>
+                    <div class="text-kpi3">
+                        870<b style="font-size: 11px"></b>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="grafico">
+                <div class="grafico1">
+                    <div class="insights">
+                        <div class="sales1">
+                            <span class="material-icons-sharp">poll</span><b class="tit-chart">Temperatura</b><br>
+                            <div>
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="insights1">
+                        <div class="sales1">
+                            <span class="material-icons-sharp">show_chart</span><b class="tit-chart">Luminosidade</b><br>
+                            <div>
+                                <canvas id="myChart2"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grafico2">
+                    <div class="insights2">
+                        <div class="sales">
+                            <span class="material-icons-sharp">donut_large</span><b
+                                class="tit-chart1">Umidade</b><br>
+                            <div>
+                                <canvas id="myChart3"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="recent-order">
+                <h2>Dados Recentes</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th id="numero">Número Sensor</th>
+                            <th id="localizacao">Localização Sensor</th>
+                            <th id="status">Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12345</td>
+                            <td>Bloco 8D</td>
+                            <td class="warning">Instável</td>
+                            <td class="primary">Detalhes</td>
+                        </tr>
+                        <tr>
+                            <td>12345</td>
+                            <td>Bloco 8D</td>
+                            <td class="primary">Estável</td>
+                            <td class="primary">Detalhes</td>
+                        </tr>
+                        <tr>
+                            <td>12345</td>
+                            <td>Bloco 8D</td>
+                            <td class="warning">Instável</td>
+                            <td class="primary">Detalhes</td>
+                        </tr>
+                        <tr>
+                            <td>12345</td>
+                            <td>Bloco 8D</td>
+                            <td class="primary">Estável</td>
+                            <td class="primary">Detalhes</td>
+                        </tr>
+                        <tr>
+                            <td>12345</td>
+                            <td>Bloco 8D</td>
+                            <td class="warning">Instável</td>
+                            <td class="primary">Detalhes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        <!-- FIM MAIN (MEIO)  -->
+
+        <!-- <script src="index.js"></script> -->
+</body>
+
+</html>
+<script>
+    function atualizarFeed() {
+        //aguardar();
+        fetch("/avisos/listar").then(function (resposta) {
+            if (resposta.ok) {
+                if (resposta.status == 204) {
+                    var feed = document.getElementById("div_sensor");
+                    var mensagem = document.createElement("span");
+                    mensagem.innerHTML = "Nenhum resultado encontrado."
+                    feed.appendChild(mensagem);
+                    throw "Nenhum resultado encontrado!!";
+                }
+
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                    var feed = document.getElementById("div_sensor");
+                    feed.innerHTML = "";
+                    for (let i = 0; i < resposta.length; i++) {
+                        var publicacao = resposta[i];
+
+                        // criando e manipulando elementos do HTML via JavaScript
+                        // var divPublicacao = document.createElement("div");
+                        var kpiSensor = document.createElement("div");
+                        // var spanTitulo = document.createElement("span");
+                        // var spanNome = document.createElement("span");
+                        // var divDescricao = document.createElement("div");
+                        // var divButtons = document.createElement("div");
+                        // var btnEditar = document.createElement("button");
+                        // var btnDeletar = document.createElement("button");
+
+
+                        kpiSensor.innerHTML = `publicacao.kpiSensor`;
+                        // spanTitulo.innerHTML = "Título: <b>" + publicacao.titulo + "</b>";
+                        // spanNome.innerHTML = "Autor: <b>" + publicacao.nome + "</b>";
+                        // divDescricao.innerHTML = "Descrição: <b>" + publicacao.descricao + "</b>";
+                        // btnEditar.innerHTML = "Editar";
+                        // btnDeletar.innerHTML = "Deletar";
+
+                        // divPublicacao.className = "publicacao";
+                        // spanTitulo.id = "inputNumero" + publicacao.idAviso;
+                        // spanNome.className = "publicacao-nome";
+                        // spanTitulo.className = "publicacao-titulo";
+                        // divDescricao.className = "publicacao-descricao";
+
+                        // divButtons.className = "div-buttons"
+
+                        // btnEditar.className = "publicacao-btn-editar"
+                        // btnEditar.id = "btnEditar" + publicacao.idAviso;
+                        // btnEditar.setAttribute("onclick", `editar(${publicacao.idAviso})`);
+
+                        // btnDeletar.className = "publicacao-btn-editar"
+                        // btnDeletar.id = "btnDeletar" + publicacao.idAviso;
+                        // btnDeletar.setAttribute("onclick", `deletar(${publicacao.idAviso})`);
+
+                        divsensor.appendChild(kpiSensor);
+                        // divPublicacao.appendChild(spanNome);
+                        // divPublicacao.appendChild(spanTitulo);
+                        // divPublicacao.appendChild(divDescricao);
+                        // divPublicacao.appendChild(divButtons);
+                        // divButtons.appendChild(btnEditar);
+                        // divButtons.appendChild(btnDeletar);
+                        // feed.appendChild(divPublicacao);
+                    }
+
+                    finalizarAguardar();
+                });
+            } else {
+                throw ('Houve um erro na API!');
+            }
+        }).catch(function (resposta) {
+            console.error(resposta);
+            finalizarAguardar();
+        });
+    }
+</script>
+
+<script>
+    function dependente(){
+        if(id==null){
+            window.location = "../dependente.html";
+        }
+    }
+</script>
+
+<script>
+
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    b_id.innerHTML = sessionStorage.ID_USUARIO;
+
+    /*Gráfico de Barras*/
+    const labels = [
+        '06:00',
+        '08:00',
+        '10:00',
+        '12:00',
+        '14:00',
+        '16:00',
+    ];
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'Perigo',
+            backgroundColor: ['#eb4c3e'],
+            borderColor: '',
+            data: [0, 0, 0 , 22, 6, 0],
+        },
+        {
+            label: 'Normal',
+            backgroundColor: ['#12f568'],
+            borderColor: '',
+            data: [15, 17],
+        },
+        {
+            label: 'Alerta',
+            backgroundColor: ['#f0cb27'],
+            borderColor: '',
+            data: [0, 0, 13, 0, 0, 19],
+        },
+        ]
+    }
+    /*Gráfico de Barras*/
+    const labels2 = [
+        '06:00',
+        '08:00',
+        '10:00',
+        '12:00',
+        '14:00',
+        '16:00',
+    ];
+
+    const data2 = {
+        labels: labels2,
+        datasets: [{
+            label: 'Estufa 1',
+            backgroundColor: ['#12f568'],
+            borderColor: '#12f568',
+            data: [680, 700, 730, 750, 760, 735],
+        },
+        ]
+    }
+/*Gráfico de Donut*/
+    const labels3 = [
+        'Estufa 1'
+    ];
+
+    const data3 = {
+        labels: labels3,
+        datasets: [{
+            label: 'Luminosidade',
+            backgroundColor: [
+                '#ffbb55','transparent'],
+            borderColor: '#7d8da1',
+            data: [54, 46],
+        },
+        ]
+    };
+
+
+    const config = {
+        type: 'bar',
+        data: data,
+        options: {}
+    };
+
+    const config2 = {
+        type: 'line',
+        data: data2,
+        options: {}
+    };
+
+    const config3 = {
+        type: 'doughnut',
+        data: data3,
+        options: {}
+    };
+</script>
+
+<script>
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+
+    const myChart2 = new Chart(
+        document.getElementById('myChart2'),
+        config2
+    );
+
+    const myChart3 = new Chart(
+        document.getElementById('myChart3'),
+        config3
+    );
+</script>

@@ -45,6 +45,7 @@ function adicionar(nome, id, data, cpf, email, senha) {
 
 module.exports = {
     entrar,
+    validarSessao,
     cadastrar,
     adicionar,
     listar,
